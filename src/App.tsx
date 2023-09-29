@@ -29,7 +29,7 @@ function App() {
       <button onClick={() => botaoPreco(-5)}>-5</button><button onClick={() => botaoPreco(-1)}>-1</button><input type="text" placeholder='preco' value={preco_milheiro} readOnly/><button onClick={() => botaoPreco(1)}>+1</button><button onClick={() => botaoPreco(5)}>+5</button>
       <p>Bônus</p>
       <button onClick={()=> botaoBonus(-100)}>-100</button><button onClick={()=> botaoBonus(-10)}>-10</button><button onClick={()=> botaoBonus(-5)}>-5</button><input type="text" placeholder='bonus' value={`${bonus} %`} readOnly/><button onClick={() => botaoBonus(5)}>+5</button><button onClick={() => botaoBonus(10)}>+10</button><button onClick={() => botaoBonus(100)}>+100</button>
-      {bonus > 0 && <p>Na compra de {qtd_milhas} milhas, você receberá mais {qtd_milhas * (bonus / 100)}. <br />O preço real do milheiro cai para R$ {((preco_milheiro * (qtd_milhas / 1000)) / ((qtd_milhas) + (qtd_milhas / (bonus / 100)) / 1000)).toFixed(2)}</p>}
+      {bonus > 0 && <p>Na compra de {qtd_milhas} milhas, você receberá mais {qtd_milhas * (bonus / 100)}. <br />O preço real do milheiro cai para R$ {((preco_milheiro * (qtd_milhas / 1000)) / (((qtd_milhas) + (qtd_milhas / (bonus / 100))) / 1000)).toFixed(2)}</p>}
       <h2>Quantidade final de milhas</h2>
       <p>{qtd_milhas + (qtd_milhas * bonus / 100)}</p>
       <h2>Valor final</h2>

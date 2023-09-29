@@ -9,8 +9,6 @@ function App() {
 
   const [bonus, setBonus] = useState<number>(0)
 
-  const [valorFinal, setValorFinal] = useState<number>(0)
-
   const botaoMilhas = (valor: number) => {
     setQtd_milhas(qtd_milhas + valor)
   }
